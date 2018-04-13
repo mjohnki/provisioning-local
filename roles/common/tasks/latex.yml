@@ -1,0 +1,16 @@
+---
+- name: install Latex
+  dnf: name={{item}} state=latest
+  with_items:
+    - texlive
+    - texlive-latex
+    - texlive-xetex
+    - texlive-collection-latex
+    - texlive-collection-latexrecommended
+    - texlive-xetex-def
+    - texlive-collection-xetex
+  become: yes
+
+- name: install Latex
+  dnf: name=texstudio state=latest
+  become: yes

@@ -1,0 +1,7 @@
+---
+- name: install KeePassX
+  dnf: 
+    name: "keepassx"
+    state: latest
+  become: yes
+  

@@ -1,0 +1,15 @@
+---
+- name: Install Eclipse
+  unarchive: 
+    src: "{{eclipse_url}}"
+    dest: /opt
+    copy: no
+    owner: martin
+    creates: /opt/eclipse
+  become: yes
+
+- name: Create Eclipse Laucher shortcut 
+  copy: 
+    src: Eclipse.desktop
+    dest: /usr/share/applications/Eclipse.desktop
+  become: yes

@@ -1,0 +1,6 @@
+---
+androidSDK_url: http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+androidStudio_url: https://dl.google.com/dl/android/studio/ide-zips/3.1.1.0/android-studio-ide-173.4697961-linux.zip
+google_Chrome_baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
+eclipse_url: https://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/oxygen/3a/eclipse-jee-oxygen-3a-linux-gtk-x86_64.tar.gz
+toolbox: jetbrains-toolbox-1.8.3678

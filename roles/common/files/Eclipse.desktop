@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Eclipse
+Exec="/opt/eclipse/eclipse" %f
+Icon=/opt/eclipse/icon.xpm
+Categories=Development;IDE;
+Terminal=false
+StartupNotify=true
+Name[de_DE]=Eclipse

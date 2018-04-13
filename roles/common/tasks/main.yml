@@ -1,0 +1,8 @@
+---
+  - include: chrome.yml
+  - include: thunderbird.yml
+  - include: android.yml
+  - include: eclipse.yml
+  - include: latex.yml
+  - include: jetbrains.yml
+  - include: keePassX.yml

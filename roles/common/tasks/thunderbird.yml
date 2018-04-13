@@ -1,0 +1,12 @@
+---
+- name: install Thunderbird
+  dnf:
+    name: "thunderbird"
+    state: latest
+  become: yes
+
+- name: install Thunderbird Enigmail
+  dnf:
+    name: "thunderbird-enigmail"
+    state: latest
+  become: yes

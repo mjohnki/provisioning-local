@@ -1,0 +1,9 @@
+---
+- name: Install JetBrains Toolbox
+  unarchive: 
+    src: "https://download.jetbrains.com/toolbox/{{toolbox}}.tar.gz"
+    dest: /opt
+    copy: no
+    owner: martin
+    creates: /opt/{{toolbox}}
+  become: yes

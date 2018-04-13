@@ -1,0 +1,12 @@
+---
+- name: Add repository
+  yum_repository:
+    name: google-chrome
+    description: google-chrome YUM repo
+    baseurl: "{{google_Chrome_baseurl}}"
+
+- name: install Google Chrome
+  dnf:
+    name: "google-chrome-stable"
+    state: latest
+  become: yes

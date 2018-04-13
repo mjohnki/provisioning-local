@@ -1,0 +1,41 @@
+---
+- name: install Android deps
+  dnf: name={{item}} state=latest
+  with_items:
+    - qemu-kvm
+    - android-tools
+    - libstdc++.i686
+    - zlib.i686
+  become: yes
+
+- name: Install Android Studio
+  unarchive: 
+    src: "{{androidStudio_url}}"
+    dest: /opt 
+    copy: no
+    creates: /opt/android-studio
+  become: yes
+
+- name: Create Android Studio Laucher shortcut 
+  copy: 
+    src: AndroidStudio.desktop
+    dest: /usr/share/applications/AndroidStudio.desktop
+  become: yes
+
+- name: Install Android SDK
+  unarchive: 
+    src: "{{androidSDK_url}}"
+    dest: /opt
+    copy: no
+    owner: martin
+    creates: /opt/android-sdk-linux
+  become: yes
+
+- name: Install Android SDK Components
+  shell: echo y | /opt/android-sdk-linux/tools/android update sdk --no-ui --filter {{item}}
+  with_items:
+    - android-23
+    - build-tools-23.0.1
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository

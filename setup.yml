@@ -1,0 +1,11 @@
+---
+- hosts: local
+  connection: local
+  become_user: root
+  become_method: su
+  
+  roles:
+    - common
+
+
+
